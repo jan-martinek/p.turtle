@@ -37,10 +37,10 @@ var s = function(p) {
     run.print(); // completely printed run
 
     p.translate(0, 200);
-    run.animate(10); // slowly printed run
+    run.animate(5); // slowly printed run
 
     p.translate(200, 0);
-    run2.animate(30); // quickly printed run
+    run2.animate(20); // quickly printed run
 
     p.pop();
   };
