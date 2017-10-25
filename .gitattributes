@@ -1,0 +1,7 @@
+/docs/* linguist-vendored
+/docs export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.eslintrc.yaml export-ignore
+/.editorconfig export-ignore
+/README.md export-ignore

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./vendor/highlight/styles/solarized-light.css">
+</head>
+<body>
+  <h1>p.turtle</h1>
+  <p>Basic LOGO turtle implemented in <a href="http://p5js.org">p5.js</a>.</p>
+  
+  <div id="sketch"></div>
+
+  <h2> Minimal example</h2>
+  
+  <div style="float: left" id="minimal"></div>
+
+  <pre><code class="javascript">
+  var sketch = function(p) {
+    var turtle, run;
+
+    p.setup = function() {
+      p.createCanvas(400, 400);
+      
+      p.background(200);
+      p.angleMode(p.DEGREES);
+      p.strokeWeight(1);
+
+      turtle = new Turtle(p);
+      turtle.penDown = true;
+
+      for (var i = 0; i < 6; i++) {
+        turtle.color = 'black';
+        turtle.forward(50);
+        turtle.right(360 / 6);
+      }
+
+      turtle.right(360);
+      
+      run = turtle.getRun();
+    };
+
+    p.draw = function() {
+      p.background(200);
+      run.animate(5);
+    };
+  };
+
+  var minimal = new p5(sketch);
+  </code></pre>
+
+  <script src="./vendor/highlight/highlight.pack.js"></script>
+  <script src="./vendor/p5/lib/p5.min.js"></script>
+  <script src="./../dist/turtle.js"></script>
+  <script src="./sketch.js"></script>
+  <script>
+    var s = function(p) {
+      var turtle, run;
+
+      p.setup = function() {
+        p.createCanvas(400, 400);
+        
+        p.background(200);
+        p.angleMode(p.DEGREES);
+        p.strokeWeight(1);
+
+        turtle = new Turtle(p);
+        turtle.penDown = true;
+
+        for (var i = 0; i < 6; i++) {
+          turtle.color = 'black';
+          turtle.forward(50);
+          turtle.right(360 / 6);
+        }
+
+        turtle.right(360);
+        run = turtle.getRun();
+      };
+
+      p.draw = function() {
+        p.background(200);
+        run.animate(5);
+      };
+    };
+
+    var minimal = new p5(s, 'minimal');
+
+    hljs.initHighlightingOnLoad();    
+  </script>
+</body>
+</html>
