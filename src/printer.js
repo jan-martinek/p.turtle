@@ -68,7 +68,7 @@ function Printer(p, turtle, bodyName) {
         }
 
         if (stepCount > 0) {
-          position = window.p5.Vector.lerp(pin1.pos, pin2.pos, step / stepCount);
+          position = pin1.pos.copy().lerp(pin2.pos, step / stepCount);
         } else {
           position = pin2.pos.copy();
         }
