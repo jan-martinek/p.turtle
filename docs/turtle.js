@@ -225,9 +225,9 @@ function Turtle(p, posX, posY) {
     return new Printer(p, _this, name);
   };
 
-  function fallback(axis, amount) {
-    var dimension = axis === 'x' ? 'width' : 'height';
-    return amount >= 0 ? amount : Math.floor(p[dimension] / 2);
+  function fallback(amount, axis) {
+    if (amount % 1 === 0) return amount;
+    return Math.floor(p[axis === 'x' ? 'width' : 'height'] / 2);
   }
 }
 
