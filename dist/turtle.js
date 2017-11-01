@@ -221,6 +221,14 @@ function Turtle(p, posX, posY) {
     _this.pin('ROTATE', -deg);
   };
 
+  this.getX = function () {
+    return pos.x;
+  };
+
+  this.getY = function () {
+    return pos.y;
+  };
+
   this.getRun = function (name) {
     return new Printer(p, _this, name);
   };

@@ -43,6 +43,10 @@ function Turtle(p, posX, posY) {
     this.pin('ROTATE', -deg);
   };
 
+  this.getX = () => pos.x;
+
+  this.getY = () => pos.y;
+
   this.getRun = name => new Printer(p, this, name);
 
   function fallback(amount, axis) {

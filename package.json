@@ -1,6 +1,6 @@
 {
   "name": "p.turtle",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Basic LOGO turtle implemented in p5.js",
   "main": "src/turtle.js",
   "scripts": {
